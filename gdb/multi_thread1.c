@@ -30,12 +30,13 @@ void print_sequence(const char * s)
     for(i=1;i<=5;i++)
     {
         printf("%s:%d\n", s, i);
-        system("sleep 1");
+        //system("sleep 1");
     }
 }
 
 void * thread_function(void *arg)
 {
     print_sequence(arg);
+    return NULL;
 }
 
